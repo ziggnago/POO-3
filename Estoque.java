@@ -283,7 +283,7 @@ public class Estoque {
             System.out.println("\nSALDO DE ITENS NO ESTOQUE\n");
             for (int indice = 0; indice < estoqueItems.size(); indice++) {
                 System.out.println("[" + indice + "] - " + estoqueItems.get(indice).getNome() + " | Receita: "
-                        + estoqueItems.get(indice).calcularReceita() + " | Vendidos: " + estoqueItems.get(indice).getQtdVendida());
+                        + estoqueItems.get(indice).calcularReceita() + " | Vendidos: " + estoqueItems.get(indice).getQtdVendida() + " | Comprados: " + estoqueItems.get(indice).getQtdComprada() + " | Preço-Compra: " + estoqueItems.get(indice).getPrecoCompra() + " | Preço-Venda: " + estoqueItems.get(indice).getPrecoVenda());
             }
         } else {
             throw new EstoqueVazioException();

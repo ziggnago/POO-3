@@ -9,16 +9,17 @@ public class Cantina {
 
     public void menu() {
         System.out.println(
-                "\n|==========| " + "                Cantina-IFAL            " + "    |==========|" +
-                        "\n|==========| [1] - Cadastrar itens no Estoque" + "            |==========|" +
-                        "\n|==========| [2] - Remover itens do Estoque" + "              |==========|" +
-                        "\n|==========| [3] - Adicionar itens ao Estoque " + "           |==========|" +
-                        "\n|==========| [4] - Vender Itens" + "                          |==========|" +
-                        "\n|==========| [5] - Resumo itens do Estoque" + "               |==========|" +
-                        "\n|==========| [6] - Itens com Estoque baixo de 50" + "         |==========|" +
-                        "\n|==========| [7] - Receita total(Lucros e/ou Prejuísos)" + "  |==========|" +
+                "\n|==========| " + "                Cantina-IFAL            " + "       |==========|" +
+                        "\n|==========| [1] - Cadastrar itens no Estoque" + "               |==========|" +
+                        "\n|==========| [2] - Remover itens do Estoque" + "                 |==========|" +
+                        "\n|==========| [3] - Adicionar itens ao Estoque " + "              |==========|" +
+                        "\n|==========| [4] - Vender Itens" + "                             |==========|" +
+                        "\n|==========| [5] - Resumo itens do Estoque" + "                  |==========|" +
+                        "\n|==========| [6] - Itens com Estoque baixo de 50" + "            |==========|" +
+                        "\n|==========| [7] - Receita total(Lucros e/ou Prejuísos)" + "     |==========|" +
+                        "\n|==========| [8] - Receita por Item(Lucros e/ou Prejuísos)" + "  |==========|" +
                         "\n|==========| " + cor.ansi_red + "[0] - Finalizar programa   " + cor.ansi_reset
-                        + "               " + "  |==========|" + "\nResposta: ");
+                        + "               " + "     |==========|" + "\nResposta: ");
     }
 
     public void mostraReceitaGeral(double totalGastos, double totalVendidos){
@@ -76,9 +77,10 @@ public class Cantina {
                 System.out.println(e.getMessage());
             }
         } else if (resposta == 7) {
+            mostraReceitaGeral(this.totalComprados, this.totalVendidos);
+        } else if(resposta == 8){
             try {
                 estoqueCantina.mostrarSaldoIndividual();
-                mostraReceitaGeral(this.totalComprados, this.totalVendidos);
             } catch (EstoqueVazioException e) {
                 System.out.println(e.getMessage());
             }
