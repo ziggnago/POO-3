@@ -1,2 +1,0 @@
-INTEGRANTES:  JOÃO VICTOR ZIGNAGO E KAUÃ KELVYN COSTA DE MORAES
-ARQUIVO INPUT BASEADO NESSE CÓDIGO : https://stackoverflow.com/questions/35415733/how-to-throw-a-customized-inputmismatchexception-java

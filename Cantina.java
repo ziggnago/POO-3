@@ -103,8 +103,5 @@ public class Cantina {
         }
     }
 
-    public static void main(String[] args) {
-        Cantina cantina = new Cantina();
-        cantina.start();
-    }
+    
 }
